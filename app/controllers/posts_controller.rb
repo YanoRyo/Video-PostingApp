@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post,only: %i(show destroy)
+
   def new
     @post = Post.new
   end
@@ -16,6 +18,13 @@ class PostsController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    redirect_to root_path,notice:'削除しました！' if@post.destroy
+  end
+
+  def set_post
     @post = Post.find_by(id: params[:id])
   end
 
