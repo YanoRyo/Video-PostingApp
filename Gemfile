@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.3.1'
 # Rails 5.1以降を使用している場合はjquery-railsをGemfileに追加
 gem 'jquery-rails'
+# 画像アップロードするためにcarrierwave
+gem 'carrierwave', '~> 1.0'
