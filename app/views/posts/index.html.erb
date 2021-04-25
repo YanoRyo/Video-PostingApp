@@ -2,10 +2,13 @@
 <ul class="list-unstyled">
 <% @posts.each do |post| %>
   <li class="media">
+  <%= link_to post_path(post) do %>
   <%= video_tag post.video.to_s, :size => "360x200" %>
-  動画のサムネイル
+  <% end %>
     <div class="media-body">
+    <%= link_to post_path(post) do %>
       <h5 class="mt-0 mb-1"><%= post.title%></h5>
+    <% end %>
       <%= post.body%>
     </div>
   </li>
